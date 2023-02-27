@@ -1,4 +1,12 @@
-# AngularPersonas
+# Angular Personas
+
+Frontend para [Express Personas](https://github.com/akobashikawa/express-personas) ó [Spring Boot Personas](https://github.com/akobashikawa/springboot-personas)
+
+## Hola
+
+- Saludar a alguien
+
+---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
