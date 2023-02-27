@@ -1,1 +1,12 @@
-<p>hola works!</p>
+<div>
+  <h1>Hola</h1>
+
+  <p><em>Usando backend: {{ backendBaseUrl }}</em></p>
+
+  <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="nombre">
+
+  <button class="btn btn-primary mt-2" (click)="hola()">Hola</button>
+
+  <h2 class="text-bg-success p-3 my-2" *ngIf="saludo">{{ saludo }}</h2>
+  <p class="text-bg-danger p-3 my-2" *ngIf="error">{{ error }}</p>
+</div>
