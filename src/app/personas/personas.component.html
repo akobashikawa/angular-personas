@@ -1,1 +1,58 @@
-<p>personas works!</p>
+<div>
+  <h1>Personas</h1>
+
+  <p><em>Usando backend: {{ backendBaseUrl }}</em></p>
+
+  <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="nombre">
+
+  <p>
+      <button class="btn btn-primary mt-2" (click)="agregar()">Agregar</button>
+  </p>
+
+  <p class="text-bg-danger p-3 my-2" *ngIf="error">{{ error }}</p>
+  <p class="text-bg-success p-3 my-2" *ngIf="nuevaPersona">Persona agregada: {{ nuevaPersona.nombre }}</p>
+
+  <p>
+      <button class="btn btn-primary mt-2" (click)="listar()">Listar</button>
+  </p>
+
+  <p>Personas: <span>{{ personas.length || 0 }}</span></p>
+  <table class="table table-striped table-hover">
+      <thead>
+          <tr>
+              <th>id</th>
+              <th>nombre</th>
+              <th>nombre</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let persona of personas">
+              <td>{{ persona.id }}</td>
+              <td>{{ persona.nombre }}</td>
+              <td>
+                  <button class="btn btn-danger btn-sm" (click)="eliminar(persona)">Eliminar</button>
+                  <button class="btn btn-primary btn-sm mx-1" (click)="abrirModal(persona)">Editar</button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+
+  <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Persona</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <p>id: {{ personaEditada.id }}</p>
+                  <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="personaEditada.nombre">
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary" (click)="guardar()">Guardar</button>
+              </div>
+          </div>
+      </div>
+  </div>
