@@ -2,6 +2,26 @@
 
 Frontend para [Express Personas](https://github.com/akobashikawa/express-personas) ó [Spring Boot Personas](https://github.com/akobashikawa/springboot-personas)
 
+## Ramas
+
+- Cada rama contiene un caso desarrollado.
+
+### [Base](https://github.com/akobashikawa/angular-personas/tree/base)
+
+- Un punto de partida
+
+### [Hola Mundo](https://github.com/akobashikawa/angular-personas/tree/holamundo)
+
+- Saludar a todos
+
+### [Hola](https://github.com/akobashikawa/angular-personas/tree/hola)
+
+- Saludar a alguien
+
+### [Personas](https://github.com/akobashikawa/angular-personas/tree/personas)
+
+- Lista de personas
+
 ---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
