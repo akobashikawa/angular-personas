@@ -29,7 +29,7 @@ export class HolamundoComponent implements OnInit, OnDestroy {
   hola() {
     this.saludo = '';
     this.error = '';
-    this.http.get<any>(this.backendBaseUrl + '/hola')
+    this.http.get<any>(this.backendBaseUrl + '/holamundo')
     .subscribe(data => {
       this.saludo = data.saludo;
     }, error => {
